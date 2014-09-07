@@ -129,9 +129,9 @@ public class TelaVenda extends JDialog {
 		gbc_panel.gridy = 0;
 		getContentPane().add(panel, gbc_panel);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{1, 210, 120, 256, 0, 145, 304, 0};
+		gbl_panel.columnWidths = new int[]{1, 210, 120, 256, 69, 381, 0};
 		gbl_panel.rowHeights = new int[]{1, 74, 0};
-		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		gbl_panel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
@@ -165,17 +165,15 @@ public class TelaVenda extends JDialog {
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(100, 149, 237));
 		GridBagConstraints gbc_panel_3 = new GridBagConstraints();
-		gbc_panel_3.insets = new Insets(0, 0, 0, 5);
-		gbc_panel_3.gridwidth = 2;
 		gbc_panel_3.anchor = GridBagConstraints.EAST;
 		gbc_panel_3.fill = GridBagConstraints.VERTICAL;
-		gbc_panel_3.gridx = 4;
+		gbc_panel_3.gridx = 5;
 		gbc_panel_3.gridy = 1;
 		panel.add(panel_3, gbc_panel_3);
 		GridBagLayout gbl_panel_3 = new GridBagLayout();
-		gbl_panel_3.columnWidths = new int[]{0, 30, 132, 132, 0, 0};
+		gbl_panel_3.columnWidths = new int[]{0, 30, 132, 57, 31, 0};
 		gbl_panel_3.rowHeights = new int[]{18, 53, 11, 0};
-		gbl_panel_3.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel_3.columnWeights = new double[]{1.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_panel_3.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_3.setLayout(gbl_panel_3);
 		
