@@ -2,12 +2,9 @@ package br.com.popeye.controle;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.print.Doc;
 import javax.print.DocFlavor;
 import javax.print.DocPrintJob;
@@ -16,6 +13,8 @@ import javax.print.PrintService;
 import javax.print.PrintServiceLookup;
 import javax.print.SimpleDoc;
 import javax.swing.JOptionPane;
+
+import bemajava.Bematech;
 
 public class ImpressaoNaoFiscal {
 	private static PrintService impressora;  
@@ -70,7 +69,32 @@ public class ImpressaoNaoFiscal {
         return false;    
     }   
   
-    public void acionarGuilhotina() throws FileNotFoundException{  
+    public void acionarGuilhotina() throws FileNotFoundException{
+    	int iRetorno = Bematech.AcionaGaveta();
+    	switch (iRetorno){
+	    	case 0: {
+	    		JOptionPane.showMessageDialog(null, "Erro de comunicação");
+	    		break;
+	    	}
+	    	case 1: {
+	    		JOptionPane.showMessageDialog(null, "OK");
+	    		break;
+	    	}
+	    	case -4:{
+	    		JOptionPane.showMessageDialog(null, "O arquivo de inicialização BemaFI32.ini não foi encontrado no diretório de sistema do Windows.");
+	    		break;
+	    	}
+	    	case -5:{
+	    		JOptionPane.showMessageDialog(null, "Erro ao abrir porta de comunicação!");
+	    	}
+	    	case -27:{
+	    		JOptionPane.showMessageDialog(null, "Status da impressora difere de 6,0,0 (ACK, ST1 e ST2)!");
+	    		break;
+	    	}
+	    	default:{
+	    		JOptionPane.showMessageDialog(null, "Verificar!");
+	    	}	
+    	}
         imprime(""+(char)27+(char)109);
         imprime(""+(char)27+(char)118+(char)140);
     }  

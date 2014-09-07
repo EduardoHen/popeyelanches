@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Version: 2.5.3
+Created-By: 1.6.0_26 (Sun Microsystems Inc.)
+
